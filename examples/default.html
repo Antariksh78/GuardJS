@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Capability Guard — Default</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: [
+              "-apple-system",
+              "BlinkMacSystemFont",
+              "SF Pro Text",
+              "Inter",
+              "system-ui",
+              "sans-serif",
+            ],
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-white text-gray-900 font-sans min-h-screen flex flex-col">
+
+  <!-- Desktop notice -->
+  <div class="sticky top-0 z-50 bg-amber-50 border-b border-amber-200">
+    <div class="max-w-3xl mx-auto px-4 py-3 flex items-start gap-3 text-sm text-amber-900">
+      <i class="ri-information-line mt-0.5"></i>
+      <p class="leading-relaxed">
+        If you don’t see a popup, you’re likely viewing this page on a desktop.
+        Capability Guard activates only on constrained environments.
+      </p>
+    </div>
+  </div>
+
+  <main class="flex-1 flex items-center justify-center px-6">
+    <div class="max-w-xl w-full text-center space-y-8">
+
+      <!-- Back -->
+      <a href="../index.html"
+         class="inline-flex items-center gap-2 text-sm text-gray-500 hover:text-gray-900 transition">
+        <i class="ri-arrow-left-line"></i>
+        Back to home
+      </a>
+
+      <div class="border border-gray-200 rounded-2xl p-8 space-y-5">
+
+        <div class="flex items-center justify-center gap-2 text-sm text-gray-500">
+          <i class="ri-shield-check-line"></i>
+          Default behavior
+        </div>
+
+        <h1 class="text-2xl font-semibold tracking-tight">
+          Zero-configuration example
+        </h1>
+
+        <p class="text-gray-600 leading-relaxed">
+          This page uses Capability Guard without any custom options.
+          If the user’s device or browser environment is constrained,
+          the default notice will appear automatically.
+        </p>
+
+        <p class="text-sm text-gray-500">
+          On capable devices, nothing happens no UI, no interruptions.
+        </p>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="../capability-guard.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>GuardJS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Remix Icon -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+  />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: [
+              "SF Pro Display",
+              "SF Pro Text",
+              "-apple-system",
+              "BlinkMacSystemFont",
+              "Inter",
+              "system-ui",
+              "sans-serif",
+            ],
+          },
+          colors: {
+            subtle: "#6B7280",
+            border: "#E5E7EB",
+          },
+        },
+      },
+    }
+  </script>
+</head>
+
+<body class="bg-white text-gray-900 font-sans scroll-smooth">
+
+  <!-- Back to top -->
+  <button
+    id="backToTop"
+    class="fixed bottom-6 right-6 hidden items-center justify-center w-10 h-10 rounded-full border border-border bg-white shadow-sm hover:bg-gray-50 transition"
+    aria-label="Back to top"
+  >
+    <i class="ri-arrow-up-line"></i>
+  </button>
+
+  <main class="min-h-screen px-6 py-20">
+    <div class="max-w-3xl mx-auto space-y-16">
+
+      <!-- Header -->
+      <header class="text-center space-y-5">
+        <div class="flex items-center justify-center gap-2 text-sm text-subtle">
+          <i class="ri-shield-check-line"></i>
+          <span>Client-side capability awareness</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight">
+          GuardJS
+        </h1>
+
+        <p class="text-lg text-subtle max-w-xl mx-auto leading-relaxed">
+          A tiny, dependency-free script that detects weak or risky client
+          environments and warns users <strong>only when it actually matters</strong>.
+          No tracking. No noise. No backend.
+        </p>
+      </header>
+
+      <!-- What it does -->
+      <section class="space-y-4 text-left">
+        <h2 class="text-xl font-medium flex items-center gap-2">
+          <i class="ri-information-line"></i>
+          What this does
+        </h2>
+
+        <p class="text-subtle leading-relaxed">
+          Capability Guard checks real browser and device signals such as
+          memory limits, storage availability, disabled APIs, or extreme
+          constraints and lets you gracefully inform users when their setup
+          may break core functionality.
+        </p>
+
+        <p class="text-subtle leading-relaxed">
+          It does <strong>nothing</strong> on healthy devices. No banners.
+          No alerts. No visual clutter. The script stays invisible unless
+          a real degradation risk is detected.
+        </p>
+      </section>
+
+      <!-- Install -->
+      <section class="border border-border rounded-2xl p-6 sm:p-8 space-y-4">
+        <div class="flex items-center gap-2 text-sm font-medium">
+          <i class="ri-download-line"></i>
+          <span>Install</span>
+        </div>
+
+        <div class="relative">
+          <pre
+            class="bg-gray-50 rounded-xl px-4 py-3 pr-16 text-sm overflow-hidden flex items-center"
+          >
+            <code
+              id="installCode"
+              class="whitespace-nowrap block"
+            >&lt;script src="https://guardjs.netlify.app/capability-guard.min.js"&gt;&lt;/script&gt;</code>
+          </pre>
+
+          <button
+            id="copyBtn"
+            class="absolute right-4 top-1/2 -translate-y-1/2 text-xs text-subtle hover:text-gray-900 transition"
+          >
+            Copy
+          </button>
+        </div>
+
+        <p class="text-sm text-subtle">
+          Drop it once. Configure later if needed. Works offline.
+        </p>
+      </section>
+
+      <!-- Examples -->
+      <section class="space-y-4">
+        <h2 class="text-xl font-medium flex items-center gap-2">
+          <i class="ri-flask-line"></i>
+          Free examples
+        </h2>
+
+        <div class="flex items-start gap-3 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
+            <i class="ri-information-line mt-0.5"></i>
+            <p class="leading-relaxed">
+                If an example doesn’t trigger for you, it means Capability Guard has already
+                handled this site on your device.
+                Notice-based examples are shown only once to avoid repeated interruptions.
+                Redirect mode, however, is evaluated on every visit since it represents a routing decision.
+                <br class="hidden sm:block" />
+                To re-test notice examples, clear the site data or open them in an incognito/private window.
+            </p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-4">
+          <a href="examples/default.html" class="group border border-border rounded-xl p-4 hover:bg-gray-50 transition">
+            <div class="flex items-center gap-2 font-medium">
+              <i class="ri-code-line"></i>
+              Basic detection
+            </div>
+            <p class="text-sm text-subtle mt-1">
+              Minimal setup with default warnings.
+            </p>
+          </a>
+
+          <a href="examples/custom.html" class="group border border-border rounded-xl p-4 hover:bg-gray-50 transition">
+            <div class="flex items-center gap-2 font-medium">
+              <i class="ri-layout-line"></i>
+              Custom UI hook
+            </div>
+            <p class="text-sm text-subtle mt-1">
+              Plug into your own banner or modal.
+            </p>
+          </a>
+
+          <a href="examples/redirect.html" class="group border border-border rounded-xl p-4 hover:bg-gray-50 transition">
+            <div class="flex items-center gap-2 font-medium">
+              <i class="ri-alert-line"></i>
+              Redirect mode
+            </div>
+            <p class="text-sm text-subtle mt-1">
+              Redirect to a mobile firendly page.
+            </p>
+          </a>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="border-t border-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-subtle">
+        <span>© 2026 GuardJS</span>
+
+        <div class="flex items-center gap-6">
+          <a href="https://github.com/dheeraz101/GuardJS" class="hover:text-gray-900">GitHub</a>
+          <a href="license.html" class="hover:text-gray-900">License</a>
+        </div>
+      </footer>
+
+    </div>
+  </main>
+
+  <script>
+    // Copy feedback
+    const btn = document.getElementById("copyBtn");
+    const code = document.getElementById("installCode").innerText;
+
+    btn.addEventListener("click", async () => {
+      await navigator.clipboard.writeText(code);
+      btn.textContent = "Copied";
+      setTimeout(() => (btn.textContent = "Copy"), 3000);
+    });
+
+    // Back to top
+    const backToTop = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+      backToTop.classList.toggle("hidden", window.scrollY < 300);
+    });
+
+    backToTop.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+
+</body>
+</html>
